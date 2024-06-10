@@ -1,0 +1,42 @@
+{
+  "name": "VEGASTRING",
+  "description": ".البوت الرسمي لانشاء جلسات التليثون و بيروجرام من فيجا",
+  "logo": "https://telegra.ph/file/ce276acf3d3895a712914.jpg",
+  "keywords": [
+    "telegram",
+    "bot",
+    "python",
+    "pyrogram"
+  ],
+    "env": {
+        "BOT_TOKEN": {
+            "description": "استخرج رمز الروبوت من : @BotFather",
+            "required": true
+        },  
+        "MUST_JOIN": {
+            "description": "اسم المستخدم للمجموعة أو القناة التي تريد تعيين القوة الفرعية لها. (بدون @)",
+            "required": true      
+        }, 
+        "MONGO_URL": {
+            "description": "رابط تخزين المونجو",
+            "required": true
+        },
+        "API_ID": {
+            "description": "استخرج api id من : @Api_idBot ",
+            "required": true
+        },
+        "OWNER_ID": {
+            "description": "معرف Telegram للشخص الذي سيعرف بأنه مالك الروبوت.",
+            "required": true
+        }, 
+        "API_HASH": {
+            "description": "استخرج api hash من : @Api_idBot",
+            "required": true
+        }
+    },
+    "addons": [
+        {
+            "plan": "heroku-postgresql"
+        }
+    ]
+}
