@@ -31,14 +31,7 @@ from VEGASTRING.db.users import add_served_user, get_served_users
 # 𝐆𝐫𝐞𝐞𝐭𝐢𝐧𝐠𝐬 𝐟𝐫𝐨𝐦 : 𝐕𝐞𝐆𝐚
 # load_dotenv()
 
-SUDORS = [OWNER_ID]
 
-@Client.on_message(filters.command(["/start"], "") & filters.private)
-async def kep(client, msg):
-    if msg.from_user.id in SUDORS:
-        kep = ReplyKeyboardMarkup([["قسم فيجا"], ["قسم الاذاعه"], ["قسم البوت","قسم المساعد"], ["التواصل و الاحصائيات"], ["النسخه الاحتياطيه"], ["الاشتراك الاجباري"], ["بينج","تنظيف"], ["الكولات النشطه","الفيديوهات النشطه"], ["تعليمات"], ["قفل الكيبورد"]], resize_keyboard=True)
-        await msg.reply_text("<b>╮✪ مـرحـبآ بڪ عزيـزي المطـور الاساسـي\n╯✪ اليك كيب التحكم بالبوت من فيجا</b>", reply_markup=kep)
-        
 
 @Client.on_message(filters.private & ~filters.service, group=1)
 async def users_sql(_, msg: Message):
